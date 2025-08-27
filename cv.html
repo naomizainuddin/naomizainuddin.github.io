@@ -1,544 +1,723 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 	<title>Naomi Zainuddin</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
 		/* Utils */
-/*----- Colors -----*/
-:root{
-    --color-border-light: #705681;
-    --color-border: var(--color-border-light);
-     }
-/*----- Fonts -----*/
-/*----- Dimensions and sizes -----*/
-/* Base */
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+		/*----- Colors -----*/
+		:root {
+			--color-border-light: #705681;
+			--color-border: var(--color-border-light);
+		}
 
-body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  background: #f8f8f8;
-  margin: 50px 0 100px;
-  letter-spacing: .3px;
-  color: #39424B; }
+		/*----- Fonts -----*/
+		/*----- Dimensions and sizes -----*/
+		/* Base */
+		@font-face {
+			font-family: 'Josefin Sans';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+		}
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-  margin: 0; }
+		@font-face {
+			font-family: 'Josefin Sans';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+		}
 
-h1 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  letter-spacing: 1px; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 300;
+			src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+		}
 
-h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+		}
 
-h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: .4px; }
-  h3.bold {
-    font-weight: 700; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 700;
+			src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+		}
 
-h4 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px; }
-  h4.bold {
-    font-weight: 700; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: italic;
+			font-weight: 300;
+			src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+		}
 
-h5 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 11px; }
-  h5.italic {
-    font-style: italic; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: italic;
+			font-weight: 400;
+			src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+		}
 
-h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 10px; }
+		@font-face {
+			font-family: 'Lato';
+			font-style: italic;
+			font-weight: 700;
+			src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+		}
 
-a {
-  color: inherit;
-  text-decoration: inherit; }
-  a:hover {
-    color: #2895F1; }
-  a .fa-external-link {
-    font-size: 10px;
-    vertical-align: text-top; }
+		body {
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			background: #f8f8f8;
+			margin: 50px 0 100px;
+			letter-spacing: .3px;
+			color: #39424B;
+		}
 
-p,
-li {
-  font-size: 11px; }
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			text-transform: uppercase;
+			margin: 0;
+		}
 
-blockquote {
-  font-size: 11px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  margin: 10px 25px; }
+		h1 {
+			font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+			font-weight: 700;
+			font-size: 40px;
+			letter-spacing: 1px;
+		}
 
-em {
-  color: #999; }
+		h2 {
+			font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			letter-spacing: .5px;
+		}
 
-ul {
-  margin: 10px 0 0;
-  -webkit-padding-start: 25px; }
-  ul li {
-    padding-left: 10px; }
-  ul.minimal {
-    list-style: none;
-    padding: 0; }
-    ul.minimal li {
-      margin-bottom: 3px;
-      padding-left: 0; }
-  ul.two-column {
-    -webkit-column-count: 2;
-    -webkit-column-gap: 28px;
-    -moz-column-count: 2;
-         column-count: 2;
-    -moz-column-gap: 28px;
-         column-gap: 28px; }
-    ul.two-column li {
-      padding-left: 0; }
+		h3 {
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			letter-spacing: .4px;
+		}
 
-@page {
-  size: A4; }
+		h3.bold {
+			font-weight: 700;
+		}
 
-.container {
-  padding-top: 20px; }
+		h4 {
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 300;
+			font-size: 12px;
+		}
 
-.keyline {
-  width: 45px;
-  margin: 8px 0 10px;
-  border-top: 1px solid var(--color-border); }
+		h4.bold {
+			font-weight: 700;
+		}
 
-.pull-left {
-  float: left; }
+		h5 {
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 300;
+			font-size: 11px;
+		}
 
-.pull-right {
-  float: right; }
+		h5.italic {
+			font-style: italic;
+		}
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both; }
+		h6 {
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-size: 10px;
+		}
 
-.profile-pic {
-  margin-top: -5px;
-  margin-right: 18px; }
-  .profile-pic img {
-    height: 52px;
-    width: 52px;
-    border-radius: 50%;
-    border: 2px solid var(--color-border); }
+		a {
+			color: inherit;
+			text-decoration: inherit;
+		}
 
-.summary {
-  margin: 5px 0 5px; }
+		a:hover {
+			color: #2895F1;
+		}
 
-/* Layouts */
-.page {
-  background: white;
-  width: 612px;
-  min-height: 792px;
-  display: block;
-  margin: 0 auto;
-  border-top: 10px solid var(--color-border);
-  padding: 36px 22px 30px 34px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
-  .page::after {
-    content: "";
-    display: table;
-    clear: both; }
+		a .fa-external-link {
+			font-size: 10px;
+			vertical-align: text-top;
+		}
 
-.left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
-  word-wrap: break-word;
-  height: 100%; }
+		p,
+		li {
+			font-size: 11px;
+		}
 
-.right-column {
-  width: auto;
-  overflow: hidden;
-  height: 100% }
+		blockquote {
+			font-size: 11px;
+			font-family: "Lato", Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-style: italic;
+			margin: 10px 25px;
+		}
 
-.resume-content {
-  display: flex;}
+		em {
+			color: #999;
+		}
 
-.item {
-  margin-bottom: 15px; }
-  .item::last-child {
-    margin-bottom: 0; }
+		ul {
+			margin: 10px 0 0;
+			-webkit-padding-start: 25px;
+		}
 
-@media print {
-  body {
-    margin: 0; }
-  .page {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 36px 0 30px;
-    box-shadow: none; }
-    .page .resume-header,
-    .page .resume-content {
-      padding: 0 22px 0 34px; }
-  .container {
-    break-inside: auto; }
-  .work-container .item {
-    break-inside: avoid; }
-  .fa-external-link {
-    display: none; } }
+		ul li {
+			padding-left: 10px;
+		}
 
-/* Components */
-.info-tag-container {
-  margin-bottom: 5px; }
-  .info-tag-container .fa {
-    font-size: 14px;
-    width: 12px;
-    margin-right: 5px;
-    text-align: center;
-    vertical-align: middle; }
-    .info-tag-container .fa.fa-map-marker {
-      font-size: 16px; }
-    .info-tag-container .fa.fa-mobile {
-      font-size: 18px; }
-    .info-tag-container .fa.fa-envelope-o {
-      font-size: 12px; }
-    .info-tag-container .fa.fa-desktop {
-      font-size: 11px; }
-    .info-tag-container .fa.fa-external-link {
-      width: auto;
-      font-size: inherit;
-      vertical-align: text-top; }
-  .info-tag-container .info-text {
-    font-size: 9px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 139px; }
+		ul.minimal {
+			list-style: none;
+			padding: 0;
+		}
 
-.references-container .fa {
-  font-size: 14px; }
+		ul.minimal li {
+			margin-bottom: 3px;
+			padding-left: 0;
+		}
 
+		ul.two-column {
+			-webkit-column-count: 2;
+			-webkit-column-gap: 28px;
+			-moz-column-count: 2;
+			column-count: 2;
+			-moz-column-gap: 28px;
+			column-gap: 28px;
+		}
+
+		ul.two-column li {
+			padding-left: 0;
+		}
+
+		@page {
+			size: A4;
+		}
+
+		.container {
+			padding-top: 20px;
+		}
+
+		.keyline {
+			width: 45px;
+			margin: 8px 0 10px;
+			border-top: 1px solid var(--color-border);
+		}
+
+		.pull-left {
+			float: left;
+		}
+
+		.pull-right {
+			float: right;
+		}
+
+		.clearfix::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.profile-pic {
+			margin-top: -5px;
+			margin-right: 18px;
+		}
+
+		.profile-pic img {
+			height: 52px;
+			width: 52px;
+			border-radius: 50%;
+			border: 2px solid var(--color-border);
+		}
+
+		.summary {
+			margin: 5px 0 5px;
+		}
+
+		/* Layouts */
+		.page {
+			background: white;
+			width: 612px;
+			min-height: 792px;
+			display: block;
+			margin: 0 auto;
+			border-top: 10px solid var(--color-border);
+			padding: 36px 22px 30px 34px;
+			box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.page::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.left-column {
+			float: left;
+			width: 160px;
+			margin-right: 20px;
+			word-wrap: break-word;
+			height: 100%;
+		}
+
+		.right-column {
+			width: auto;
+			overflow: hidden;
+			height: 100%
+		}
+
+		.resume-content {
+			display: flex;
+		}
+
+		.item {
+			margin-bottom: 15px;
+		}
+
+		.item::last-child {
+			margin-bottom: 0;
+		}
+
+		@media print {
+			body {
+				margin: 0;
+			}
+
+			.page {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 36px 0 30px;
+				box-shadow: none;
+			}
+
+			.page .resume-header,
+			.page .resume-content {
+				padding: 0 22px 0 34px;
+			}
+
+			.container {
+				break-inside: auto;
+			}
+
+			.work-container .item {
+				break-inside: avoid;
+			}
+
+			.fa-external-link {
+				display: none;
+			}
+		}
+
+		/* Components */
+		.info-tag-container {
+			margin-bottom: 5px;
+		}
+
+		.info-tag-container .fa {
+			font-size: 14px;
+			width: 12px;
+			margin-right: 5px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.info-tag-container .fa.fa-map-marker {
+			font-size: 16px;
+		}
+
+		.info-tag-container .fa.fa-mobile {
+			font-size: 18px;
+		}
+
+		.info-tag-container .fa.fa-envelope-o {
+			font-size: 12px;
+		}
+
+		.info-tag-container .fa.fa-desktop {
+			font-size: 11px;
+		}
+
+		.info-tag-container .fa.fa-external-link {
+			width: auto;
+			font-size: inherit;
+			vertical-align: text-top;
+		}
+
+		.info-tag-container .info-text {
+			font-size: 9px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 139px;
+		}
+
+		.references-container .fa {
+			font-size: 14px;
+		}
 	</style>
-	</head>
-	<body>
-		<main id="resume" class="page">
-			<header class="resume-header clearfix">
-			    <div class="profile-header pull-left">
-			        <h1>Naomi Zainuddin</h1>
-			        <h2>Data Engineer</h2>
-			    </div>
-			</header>
-			<div class="resume-content clearfix">
-				<aside class="left-column">
-					<div class="container about-container">
-					    <div class="title">
-					        <h3>About</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <div class="info-tag-container">
-					            <i class="fa fa-map-marker"></i>
-					        
-					                <h6 class="info-text">London</h6>
-					        </div>
-					
-					
-					
-					                        <div class="info-tag-container">
-					                            <i class="fa fa-linkedin-square"></i>
-					                        
-					                                <h6 class="info-text">
-					                                    <a href="https://www.linkedin.com/in/naomi-zainuddin-85b3b576/" target="_blank">
-					                                        in/LinkedIn <i class="fa fa-external-link" aria-hidden="true"></i>
-					                                    </a>
-					                                </h6>
-					                        </div>
-					    <div class="skills-container">
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Databricks</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>Python</h6></li>
-					                            <li><h6>PySpark</h6></li>
-					                            <li><h6>Delta</h6></li>
-					                            <li><h6>Unity Catalog</h6></li>
-					                            <li><h6>Account administration</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Infrastructure As Code</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>ARM</h6></li>
-					                            <li><h6>Bicep</h6></li>
-					                            <li><h6>Terraform</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>SQL</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>T-SQL</h6></li>
-					                            <li><h6>Azure SQL</h6></li>
-					                            <li><h6>Azure Synapse</h6></li>
-					                            <li><h6>MS-SQL</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Data Visualisation</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>PowerBI</h6></li>
-					                            <li><h6>Tableau</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>ETL Pipelines</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>Azure Data Factory</h6></li>
-					                            <li><h6>Luigi</h6></li>
-					                            <li><h6>SSIS</h6></li>
-					                            <li><h6>Alteryx</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Programming &amp; Scripting</h3>
-					                        <div class="keyline"></div>
-					                    </div>                    <ul class="minimal">
-					                            <li><h6>Python</h6></li>
-					                            <li><h6>C#</h6></li>
-					                            <li><h6>Bash</h6></li>
-					                            <li><h6>Powershell</h6></li>
-					                    </ul>
-					            </section>
-					    </div>
-				</aside>
-				<div class="right-column">
-					        <div class="container summary-container">
-					            <div class="title">
-					                <h3>Summary</h3>
-					                <div class="keyline"></div>
-					            </div>            <p class="summary">
-					                Experienced Data Engineer specialising in Azure. I&#x27;ve mostly worked at Not-For-Profits, so I&#x27;m used to wearing many hats and working across the data life-cycle.
-					            </p>
-					        </div>
-					<div class="container work-container">
-					    <div class="title">
-					        <h3>Experience</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">11/2021</span>
-					                        <span class="endDate"> - 11/2025</span>
-					                </h5>
-					            </div>
-					            <h4>Data Engineer</h4>
-					
-					            <p class="summary">As part of a small Data team, I primarily worked with external consultants to develop, launch, enhance, and support delivery of an Azure data platform and data lake.</p>
-					
-					            <ul>
-					                <li>Developed and extended centralised data platform using Delta files, Databricks, and Azure Data Factory.</li>
-					                <li>Administered multiple Azure DevOps projects, ensuring appropriate security and customising boards to meet individual project needs.</li>
-					                <li>Administered Databricks account, supported on implementation of Unity Catalog and integration with Entra ID.</li>
-					                <li>Developed and improved Infrastructure as Code, provisioning of data platform using Bicep, PowerShell, Bash, and Azure DevOps pipelines.​</li>
-					                <li>Responsible for code reviews, implemented coding standards and accompanying Pull Request template.</li>
-					                <li>Led on improvements to release process, resulting in much improved cadence</li>
-					                <li>Provided guidance on GitFlow and best practice on collaborative version control.</li>
-					                <li>Provided training in Azure SQL, Azure Data Factory, and PowerBI.</li>
-					                <li>Implemented and optimised replication of cloud database for business critical integrations.</li>
-					                <li>Supported implementation of Purview as a data governance platform.</li>
-					                <li>Spearheaded introduction of pronoun badges and pronouns in email signatures and profiles.</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">03/2020</span>
-					                        <span class="endDate"> - 11/2021</span>
-					                </h5>
-					            </div>
-					            <h4>Consultant, Data Engineer</h4>
-					
-					            <p class="summary">Worked with a range of clients developing with both modern cloud technologies as well as legacy software. Had the opportunity to contribute to internal tooling and to support the delivery of Data Science solutions using computer vision.</p>
-					
-					            <ul>
-					                <li>Operated across project life-cycle from requirements gathering, understanding the client’s needs and converting them into user stories, architecture, developing ETL processes and data modelling, to testing and documentation to deliver on reporting solution.</li>
-					                <li>Managed exports from D365 to BYOD to facilitate granular reporting in Power BI.</li>
-					                <li>Automated provisioning of data platform using Terraform, PowerShell, and Azure DevOps pipelines.​</li>
-					                <li>Debugged Databricks notebooks for micro-batching streamed data according to standard pattern.​</li>
-					                <li>Developed Data Lake solution.</li>
-					                <li>Built ETL pipelines in SSIS to support integrations for a large bank.</li>
-					                <li>Escalated concerns around project management, leading to renegotiation of scope and increased revenue.​</li>
-					                <li>Supported buddies and new team members with onboarding and Avanade best practices.​</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">10/2018</span>
-					                        <span class="endDate"> - 03/2020</span>
-					                </h5>
-					            </div>
-					            <h4>Data Engineer</h4>
-					
-					
-					            <ul>
-					                <li>Proactively led a security initiative to mitigate a vulnerability and  brought the organisation in line with policy.</li>
-					                <li>Identified and reported a security bug in a supplier&#x27;s API, and an exploit in the UI.</li>
-					                <li>Developed data warehouse in Azure SQL Server and related import processes in SSIS and C#.</li>
-					                <li>Updated and maintained NLP media monitoring solution, migrated it from Python 2.x to Python 3.x, and added new functionality.</li>
-					                <li>Maintained and refactored Python ETL scripts, interacting with a range of 3rd party APIs.</li>
-					                <li>Managed end-to-end project to update Python ETL scripts, including managing an external contractor.</li>
-					                <li>Configured, deployed and scripted the provisioning of Azure services ahead of planned system migration to the Cloud.</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">11/2016</span>
-					                        <span class="endDate"> - 10/2018</span>
-					                </h5>
-					            </div>
-					            <h4>Data Manager</h4>
-					
-					
-					            <ul>
-					                <li>Responsible for creating and maintaining single supporter view.</li>
-					                <li>Developed infrastructure for automated reporting and transfer of data from external sources to internal databases.</li>
-					                <li>Led on implementation and adoption of Alteryx and Tableau.</li>
-					                <li>Conducted root cause analysis of anomalous data.</li>
-					                <li>Led on data mapping across divisions for GDPR and administered privacy management software.</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">03/2015</span>
-					                        <span class="endDate"> - 11/2016</span>
-					                </h5>
-					            </div>
-					            <h4>Insight Analyst</h4>
-					
-					
-					            <ul>
-					                <li>Managed and administered the data warehouse in SQL Server Management Studio and FastStats.</li>
-					                <li>Supported the implementation of a new supporter focused segmentation and supporter journeys.</li>
-					                <li>Developed and maintained supporter retention model in MS SQL and Power BI.</li>
-					                <li>Produced documentation on data processes.</li>
-					                <li>Developed a standard reporting format that was compliant with brand guidelines.</li>
-					                <li>Created reports on high-level objectives, reconciling information from across different teams.</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">07/2013</span>
-					                        <span class="endDate"> - 03/2015</span>
-					                </h5>
-					            </div>
-					            <h4>Data Analyst</h4>
-					
-					
-					            <ul>
-					                <li>Led and managed new product launches and product optimisation projects within an Agile (Scrum) framework.</li>
-					                <li>Responsible for ensuring data protection policies and Caldicott principles were adhered to.</li>
-					                <li>Presented business insights and developments to a range of audiences, using a variety of mediums as appropriate.</li>
-					                <li>Produced documentation for CRM and data processes.</li>
-					                <li>Designed surveys and conducted interviews to obtain quantitative and qualitative data.</li>
-					                <li>Produced models to predict the outcomes of business decisions such as price changes.</li>
-					            </ul>
-					        </section>
+</head>
+
+<body>
+	<main id="resume" class="page">
+		<header class="resume-header clearfix">
+			<div class="profile-header pull-left">
+				<h1>Naomi Zainuddin</h1>
+				<h2>Data Engineer</h2>
+			</div>
+		</header>
+		<div class="resume-content clearfix">
+			<aside class="left-column">
+				<div class="container about-container">
+					<div class="title">
+						<h3>About</h3>
+						<div class="keyline"></div>
 					</div>
-					<div class="container education-container">
-					    <div class="title">
-					        <h3>Education</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        University of Oxford
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">10/2010</span>
-					                        <span class="endDate"> - 07/2013</span>
-					                </h5>
-					            </div>
-					            <h4>Master of Arts Philosophy, Politics, and Economics</h4>
-					
-					
-					        </section>
+					<div class="info-tag-container">
+						<i class="fa fa-map-marker"></i>
+
+						<h6 class="info-text">London</h6>
 					</div>
+
+
+
+					<div class="info-tag-container">
+						<i class="fa fa-linkedin-square"></i>
+
+						<h6 class="info-text">
+							<a href="https://www.linkedin.com/in/naomi-zainuddin-85b3b576/" target="_blank">
+								in/LinkedIn <i class="fa fa-external-link" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</div>
+					<div class="skills-container">
+						<section class="container">
+							<div class="title">
+								<h3>Databricks</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>Python</h6>
+								</li>
+								<li>
+									<h6>PySpark</h6>
+								</li>
+								<li>
+									<h6>Delta</h6>
+								</li>
+								<li>
+									<h6>Unity Catalog</h6>
+								</li>
+								<li>
+									<h6>Account administration</h6>
+								</li>
+							</ul>
+						</section>
+						<section class="container">
+							<div class="title">
+								<h3>Infrastructure As Code</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>ARM</h6>
+								</li>
+								<li>
+									<h6>Bicep</h6>
+								</li>
+								<li>
+									<h6>Terraform</h6>
+								</li>
+							</ul>
+						</section>
+						<section class="container">
+							<div class="title">
+								<h3>SQL</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>T-SQL</h6>
+								</li>
+								<li>
+									<h6>Azure SQL</h6>
+								</li>
+								<li>
+									<h6>Azure Synapse</h6>
+								</li>
+								<li>
+									<h6>MS-SQL</h6>
+								</li>
+							</ul>
+						</section>
+						<section class="container">
+							<div class="title">
+								<h3>Data Visualisation</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>PowerBI</h6>
+								</li>
+								<li>
+									<h6>Tableau</h6>
+								</li>
+							</ul>
+						</section>
+						<section class="container">
+							<div class="title">
+								<h3>ETL Pipelines</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>Azure Data Factory</h6>
+								</li>
+								<li>
+									<h6>Luigi</h6>
+								</li>
+								<li>
+									<h6>SSIS</h6>
+								</li>
+								<li>
+									<h6>Alteryx</h6>
+								</li>
+							</ul>
+						</section>
+						<section class="container">
+							<div class="title">
+								<h3>Programming &amp; Scripting</h3>
+								<div class="keyline"></div>
+							</div>
+							<ul class="minimal">
+								<li>
+									<h6>Python</h6>
+								</li>
+								<li>
+									<h6>C#</h6>
+								</li>
+								<li>
+									<h6>Bash</h6>
+								</li>
+								<li>
+									<h6>Powershell</h6>
+								</li>
+							</ul>
+						</section>
+					</div>
+			</aside>
+			<div class="right-column">
+				<div class="container summary-container">
+					<div class="title">
+						<h3>Summary</h3>
+						<div class="keyline"></div>
+					</div>
+					<p class="summary">
+						Experienced Data Engineer specialising in Azure. I&#x27;ve mostly worked at Not-For-Profits, so
+						I&#x27;m used to wearing many hats and working across the data life-cycle.
+					</p>
+				</div>
+				<div class="container work-container">
+					<div class="title">
+						<h3>Experience</h3>
+						<div class="keyline"></div>
+					</div>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">11/2021</span>
+								<span class="endDate"> - Present</span>
+							</h5>
+						</div>
+						<h4>Data Engineer</h4>
+
+						<p class="summary">As part of a small Data team, I primarily worked with external consultants to
+							develop, launch, enhance, and support delivery of an Azure data platform and data lake.</p>
+
+						<ul>
+							<li>Developed and extended centralised data platform using Delta files, Databricks, and
+								Azure Data Factory.</li>
+							<li>Administered multiple Azure DevOps projects, ensuring appropriate security and
+								customising boards to meet individual project needs.</li>
+							<li>Administered Databricks account, supported on implementation of Unity Catalog and
+								integration with Entra ID.</li>
+							<li>Developed and improved Infrastructure as Code, provisioning of data platform using
+								Bicep, PowerShell, Bash, and Azure DevOps pipelines.​</li>
+							<li>Responsible for code reviews, implemented coding standards and accompanying Pull Request
+								template.</li>
+							<li>Led on improvements to release process, resulting in much improved cadence</li>
+							<li>Provided guidance on GitFlow and best practice on collaborative version control.</li>
+							<li>Provided training in Azure SQL, Azure Data Factory, and PowerBI.</li>
+							<li>Implemented and optimised replication of cloud database for business critical
+								integrations.</li>
+							<li>Supported implementation of Purview as a data governance platform.</li>
+							<li>Spearheaded introduction of pronoun badges and pronouns in email signatures and
+								profiles.</li>
+						</ul>
+					</section>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">03/2020</span>
+								<span class="endDate"> - 11/2021</span>
+							</h5>
+						</div>
+						<h4>Consultant, Data Engineer</h4>
+
+						<p class="summary">Worked with a range of clients developing with both modern cloud technologies
+							as well as legacy software. Had the opportunity to contribute to internal tooling and to
+							support the delivery of Data Science solutions using computer vision.</p>
+
+						<ul>
+							<li>Operated across project life-cycle from requirements gathering, understanding the
+								client’s needs and converting them into user stories, architecture, developing ETL
+								processes and data modelling, to testing and documentation to deliver on reporting
+								solution.</li>
+							<li>Managed exports from D365 to BYOD to facilitate granular reporting in Power BI.</li>
+							<li>Automated provisioning of data platform using Terraform, PowerShell, and Azure DevOps
+								pipelines.​</li>
+							<li>Debugged Databricks notebooks for micro-batching streamed data according to standard
+								pattern.​</li>
+							<li>Developed Data Lake solution.</li>
+							<li>Built ETL pipelines in SSIS to support integrations for a large bank.</li>
+							<li>Escalated concerns around project management, leading to renegotiation of scope and
+								increased revenue.​</li>
+							<li>Supported buddies and new team members with onboarding and Avanade best practices.​</li>
+						</ul>
+					</section>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">10/2018</span>
+								<span class="endDate"> - 03/2020</span>
+							</h5>
+						</div>
+						<h4>Data Engineer</h4>
+
+
+						<ul>
+							<li>Proactively led a security initiative to mitigate a vulnerability and  brought the
+								organisation in line with policy.</li>
+							<li>Identified and reported a security bug in a supplier&#x27;s API, and an exploit in the
+								UI.</li>
+							<li>Developed data warehouse in Azure SQL Server and related import processes in SSIS and
+								C#.</li>
+							<li>Updated and maintained NLP media monitoring solution, migrated it from Python 2.x to
+								Python 3.x, and added new functionality.</li>
+							<li>Maintained and refactored Python ETL scripts, interacting with a range of 3rd party
+								APIs.</li>
+							<li>Managed end-to-end project to update Python ETL scripts, including managing an external
+								contractor.</li>
+							<li>Configured, deployed and scripted the provisioning of Azure services ahead of planned
+								system migration to the Cloud.</li>
+						</ul>
+					</section>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">11/2016</span>
+								<span class="endDate"> - 10/2018</span>
+							</h5>
+						</div>
+						<h4>Data Manager</h4>
+
+
+						<ul>
+							<li>Responsible for creating and maintaining single supporter view.</li>
+							<li>Developed infrastructure for automated reporting and transfer of data from external
+								sources to internal databases.</li>
+							<li>Led on implementation and adoption of Alteryx and Tableau.</li>
+							<li>Conducted root cause analysis of anomalous data.</li>
+							<li>Led on data mapping across divisions for GDPR and administered privacy management
+								software.</li>
+						</ul>
+					</section>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">03/2015</span>
+								<span class="endDate"> - 11/2016</span>
+							</h5>
+						</div>
+						<h4>Insight Analyst</h4>
+
+
+						<ul>
+							<li>Managed and administered the data warehouse in SQL Server Management Studio and
+								FastStats.</li>
+							<li>Supported the implementation of a new supporter focused segmentation and supporter
+								journeys.</li>
+							<li>Developed and maintained supporter retention model in MS SQL and Power BI.</li>
+							<li>Produced documentation on data processes.</li>
+							<li>Developed a standard reporting format that was compliant with brand guidelines.</li>
+							<li>Created reports on high-level objectives, reconciling information from across different
+								teams.</li>
+						</ul>
+					</section>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h5 class="italic pull-right">
+								<span class="startDate">07/2013</span>
+								<span class="endDate"> - 03/2015</span>
+							</h5>
+						</div>
+						<h4>Data Analyst</h4>
+
+
+						<ul>
+							<li>Led and managed new product launches and product optimisation projects within an Agile
+								(Scrum) framework.</li>
+							<li>Responsible for ensuring data protection policies and Caldicott principles were adhered
+								to.</li>
+							<li>Presented business insights and developments to a range of audiences, using a variety of
+								mediums as appropriate.</li>
+							<li>Produced documentation for CRM and data processes.</li>
+							<li>Designed surveys and conducted interviews to obtain quantitative and qualitative data.
+							</li>
+							<li>Produced models to predict the outcomes of business decisions such as price changes.
+							</li>
+						</ul>
+					</section>
+				</div>
+				<div class="container education-container">
+					<div class="title">
+						<h3>Education</h3>
+						<div class="keyline"></div>
+					</div>
+					<section class="item">
+						<div class="section-header clearfix">
+							<h3 class="bold pull-left">
+								University of Oxford
+							</h3>
+							<h5 class="italic pull-right">
+								<span class="startDate">10/2010</span>
+								<span class="endDate"> - 07/2013</span>
+							</h5>
+						</div>
+						<h4>Master of Arts Philosophy, Politics, and Economics</h4>
+
+
+					</section>
 				</div>
 			</div>
-		</main>
-	</body>
+		</div>
+	</main>
+</body>
+
 </html>
